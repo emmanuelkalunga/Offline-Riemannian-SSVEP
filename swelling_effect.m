@@ -16,7 +16,7 @@ delay = 2;
 ac = zeros(12, 5, length(methodMean));
 e = zeros(12, 5, length(methodMean));
 clear Cm detMean
-for sub = 11+5 %6:17
+for sub = 11+6 %6:17
     clear x_all H_all P X Pm PSD
     %% Load data
     disp('********************************************************');
@@ -101,7 +101,7 @@ for sub = 11+5 %6:17
     plot(repmat(log(detm(2,2)),1,Nt),'--m', 'LineWidth', 2,'DisplayName','Harmonic')
     %plot(repmat(log(detm(3,2)),1,Nt),'--k', 'LineWidth', 2,'DisplayName','Geometric')
     %--------------------------------------------   
-    plot(repmat(log(detm(4,2)),1,Nt),'-c', 'LineWidth', 2,'DisplayName','Airm')
+    plot(repmat(log(detm(4,2)),1,Nt),'-c', 'LineWidth', 2,'DisplayName','AIR')
     plot(repmat(log(detm(5,2)),1,Nt),'-.k', 'LineWidth', 2,'DisplayName','Log-Euclidean')
     plot(repmat(log(detm(6,2)),1,Nt),'-.m', 'LineWidth', 2,'DisplayName','S-divergence')
     plot(repmat(log(detm(7,2)),1,Nt),'--g', 'LineWidth', 2,'DisplayName','log-det \alpha-div')% or methodMean{4} (ld)
