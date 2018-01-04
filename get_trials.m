@@ -36,6 +36,8 @@ function X = get_trials(x_all, H_all, tLen, varargin)
 
             [trials sz] = trigg(x{session}, markers, round(trial_limits(1)*(H{session}.SampleRate)+1), round(trial_limits(2)*H{session}.SampleRate)); %number of channels, trial length, number of trials
             Xtmp1 = reshape(trials, sz);
+	    %size(Xtmp1)
+	    %Xtmp1 = bsxfun(@minus, Xtmp1, mean(Xtmp1,2));
             Xtmp2 = cat(3, Xtmp2, Xtmp1);
         end
         X{typ} = Xtmp2;
